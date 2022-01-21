@@ -1,0 +1,24 @@
+ALGORITHME text_analyze
+VAR
+    c : CHAR := '';
+    nb_char : ENTIER := 0;
+    nb_mot : INTEGER := 0;
+    nb_vow : INTEGER := 0;
+COMMENCER
+    TANTQUE (c <> '.') FAIRE
+        Lire(c);
+        nb_char := nb_char +1;
+        SI (c = 'a' OU c='e' OU c='i' OU c='o' OU c='u' OU c='y') ALORS
+            nb_voeu := nb_voeu +1;
+        FIN SI
+
+        SI (c=' ') ALORS
+            nb_mot := nb_mot +1;
+        FIN SI
+        
+    END_WHILE
+
+    Write("La longueur de la phrase est ",nb_char);
+    Write("Le nombre de mots dans la phrase est ",nb_word);
+    Write("le nombre de voyelles dans la phrase. est ",nb_vow);
+FINIR
